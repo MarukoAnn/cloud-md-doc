@@ -1,5 +1,9 @@
 .icon-button {
-    background: #fff;
+    background: #F8F9FA;
     border: 0;
     color: inherit;
+}
+
+.c-link {
+    cursor: pointer;
 }

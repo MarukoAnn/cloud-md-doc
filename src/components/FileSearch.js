@@ -3,17 +3,20 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faSearch, faTimes} from '@fortawesome/free-solid-svg-icons'
 // 引入类型依赖
 import PropsTypes from 'prop-types'
-
+import useKeyPress from '../hooks/useKeyPress'
 const FileSearch = ({title, onFileSearch}) => {
     const [inputActive, setInputActive] = useState(false)
     const [ value, setValue] = useState("")
 
+    const enterPressed = useKeyPress(13);
+    const escPressed = useKeyPress(27)
+
     let node = useRef(null)
 
     // 关闭事件
-    const closeSearch = (e) => {
+    const closeSearch = () => {
         // 阻止冒泡
-        e.preventDefault();
+        // e.preventDefault();
         setInputActive(false);
         setValue('')
     }
@@ -26,20 +29,26 @@ const FileSearch = ({title, onFileSearch}) => {
     }, [inputActive])
 
     useEffect(() => {
-        const handleInputEvent = (event) => {
-            const {keyCode} = event;
-            if(keyCode === 13 && inputActive){
-                onFileSearch(value)
-            }else if(keyCode === 27 && inputActive){
-                closeSearch(event)
-            }
-        }
-        document.addEventListener('keyup', handleInputEvent)
-        return () => {
-            // 也秒销货时，调用
-            document.removeEventListener('keyup', handleInputEvent)
-        }
-    })
+    	if(enterPressed && inputActive){
+    		onFileSearch(value)
+	    }else if(escPressed && inputActive){
+    		closeSearch()
+	    }
+		/*
+		        const handleInputEvent = (event) => {
+		            const {keyCode} = event;
+		            if(keyCode === 13 && inputActive){
+		                onFileSearch(value)
+		            }else if(keyCode === 27 && inputActive){
+		                closeSearch()
+		            }
+		        }
+		        document.addEventListener('keyup', handleInputEvent)
+		        return () => {
+		            // 也秒销货时，调用
+		            document.removeEventListener('keyup', handleInputEvent)
+		        }*/
+    }, [])
 
     return (
         <div className="alert alert-primary d-flex justify-content-between align-items-center">
