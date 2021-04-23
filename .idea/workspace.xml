@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fab8175b-d47a-42db-bafc-8518f71ebd5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/BottomBtn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useKeyPress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TabList.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/FileList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FileList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FileSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FileSearch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useHooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TabList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/defaultFiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/defaultFiles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -44,6 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -51,6 +54,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -80,7 +84,8 @@
       <updated>1618298981770</updated>
       <workItem from="1618298999848" duration="722000" />
       <workItem from="1618317417821" duration="446000" />
-      <workItem from="1619074818568" duration="2742000" />
+      <workItem from="1619074818568" duration="3282000" />
+      <workItem from="1619144754334" duration="5565000" />
     </task>
     <task id="LOCAL-00001" summary="操作日志:&#10;   (1)electron markdown文件管理">
       <created>1618317824985</created>
@@ -89,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618317824985</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="操作日志:&#10;   (1)自定义键盘hook">
+      <created>1619078690798</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619078690798</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,6 +109,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="操作日志:&#10;   (1)electron markdown文件管理" />
-    <option name="LAST_COMMIT_MESSAGE" value="操作日志:&#10;   (1)electron markdown文件管理" />
+    <MESSAGE value="操作日志:&#10;   (1)自定义键盘hook" />
+    <option name="LAST_COMMIT_MESSAGE" value="操作日志:&#10;   (1)自定义键盘hook" />
   </component>
 </project>

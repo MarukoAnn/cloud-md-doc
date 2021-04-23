@@ -5,11 +5,14 @@ import FileSearch from './components/FileSearch'
 import FileList from './components/FileList'
 import defautFiles from './utils/defaultFiles'
 import BottomBtn from "./components/BottomBtn";
+import TabList from "./components/TabList";
+import SimpleMDE from "react-simplemde-editor";
+import "easymde/dist/easymde.min.css";
 function App() {
   return (
     <div className="App container-fluid px-0">
         <div className="row no-gutters">
-          <div className="col bg-light left-panel">
+          <div className="col-3 bg-light left-panel">
             <FileSearch 
               title={'myDocment'}
               onFileSearch={(e) => {console.log(e)}}/>
@@ -37,9 +40,22 @@ function App() {
               </div>
           </div>
         
-          <div className="col bg-primary right-panel">
+          <div className="col-9 right-panel">
+	          <TabList
+		          files={defautFiles}
+		          onTabClick={(e) => {console.log(e);}}
+		          onCloseTab={(e) => {console.log('close', e)}}
+		          activeId={'1'}
+		          unsaveIds={['1','2']}
+	          />
             <div>
-              md输入123
+	            <SimpleMDE
+	                value={defautFiles[1].body}
+	                onChange={(e) => {console.log(e);}}
+	                options={{
+	                	minHeight: '475px'
+	                }}
+	            />
             </div>
 
           </div>
